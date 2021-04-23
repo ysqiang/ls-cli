@@ -1,0 +1,35 @@
+{
+  "name": "ls-cli",
+  "version": "1.0.0",
+  "description": "create project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./lib/cli/index init",
+    "init": "node ./lib/cmd/ls-init.js ls-cli-template prj01",
+    "ls-init": "node ./bin/ls.js init ls-cli-template hhh",
+    "ls-add": "node ./bin/ls.js add"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "liu sha",
+  "license": "ISC",
+  "bin":{
+    "ls-cli": "./bin/ls.js" 
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.0.0",
+    "ora": "^5.4.0"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.0.0",
+    "ora": "^5.4.0"
+  }
+}
