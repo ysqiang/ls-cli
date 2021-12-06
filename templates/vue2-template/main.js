@@ -1,0 +1,1 @@
+console.log('root: vue2-template')

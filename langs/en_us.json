@@ -1,0 +1,54 @@
+{
+  "Cli": {
+    "CreateSuccess": "Generated project",
+    "StartPromt": "Get started with the following commands",
+    "Help": "read more information"
+  },
+  "CreateCli": {
+    "AppName": "app-name",
+    "Description": "create a new frontend project",
+    "Options": {
+      "F": "Overwrite an existing directory",
+      "SRC": "The template source. Choices：'remote'（From remote git）, 'local'（From local cli-dir）"
+    },
+    "Overwrite": {
+      "Text": "Overwrite an existing directory",
+      "Yes": "Overwrite",
+      "No": "Cancel"
+    }
+  },
+  "ListCli": {
+    "Description": "About a module all items",
+    "Options": {
+      "TPL": "Template list",
+      "I18N": "Internationalization Support list"
+    },
+    "Table": {
+      "TH1": "No.",
+      "TH2": "template name",
+      "TH3": "langs name"
+    }
+  },
+  "HelpCli": {
+    "Description": "Open the [Command] documentation "
+  },
+  "TPL": {
+    "SelectTPL":"Please choose a template",
+    "SelectVersion": "Please choose a version"
+  },
+  "Loading": {
+    "TPLList": "Loading template list...",
+    "TPLVersionList": "Loading a list of versions of the currently selected template...",
+    "TPLDir": "Downloading template directory..."
+  },
+  "Deps": {
+    "Installing": "installing...",
+    "Installed": {
+      "Text": "Installing The dependency",
+      "Yes": "Yes",
+      "No": "No"
+    },
+    "IstFailure": "Dependencies installation failure",
+    "IstSuccess": "Dependencies installation success"
+  }
+}

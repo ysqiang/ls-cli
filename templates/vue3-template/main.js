@@ -1,0 +1,1 @@
+console.log('root: vue3-template')

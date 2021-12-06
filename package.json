@@ -1,37 +1,38 @@
 {
-  "name": "lscli01",
-  "version": "1.0.0",
-  "description": "create project",
-  "main": "./lib/cmd/ls-init.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./lib/cli/index init",
-    "dev01": "node ./lib/cli/test",
-    "init": "node ./lib/cmd/ls-init.js ls-cli-template prj01",
-    "ls-init": "node ./bin/ls.js init ls-cli-template hhh",
-    "ls-add": "node ./bin/ls.js add"
+  "name": "liusha-cli",
+  "version": "1.0.4",
+  "description": "简单的 Vue 脚手架（Vue cli）",
+  "main": "index.js",
+  "bin": {
+    "ls-cli": "./bin/cli.js",
+    "ls-vue": "./bin/cli.js"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "bin"
+  ],
   "keywords": [
+    "脚手架",
     "cli"
   ],
-  "author": "ysqiang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysqiang/ls-cli.git"
+  },
+  "author": "liu sha",
   "license": "ISC",
-  "bin":{
-    "ls-cli": "./bin/ls.js",
-    "ls-cli2": "./lib/cli/index.js" 
-  },
-  "dependencies": {
-    "chalk": "^4.1.1",
-    "commander": "^7.2.0",
-    "download-git-repo": "^3.0.2",
-    "inquirer": "^8.0.0",
-    "ora": "^5.4.0"
-  },
   "devDependencies": {
-    "chalk": "^4.1.1",
-    "commander": "^7.2.0",
+    "axios": "^0.24.0",
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "cross-spawn": "^7.0.3",
     "download-git-repo": "^3.0.2",
-    "inquirer": "^8.0.0",
-    "ora": "^5.4.0"
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "ora": "^5.4.0",
+    "table": "^6.7.3"
   }
 }

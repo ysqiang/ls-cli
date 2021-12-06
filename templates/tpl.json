@@ -1,0 +1,34 @@
+{
+ "TPLList": [
+    {
+      "name": "vue2-template",
+      "dir": "vue2",
+      "versions": [
+        {
+          "tag": "1.0.1",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "name": "vue3-template",
+      "dir": "vue3",
+      "versions": [
+        {
+          "tag": "1.0.1",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "name": "html-template",
+      "dir": "html",
+      "versions": [
+        {
+          "tag": "1.0.1",
+          "desc": ""
+        }
+      ]
+    }
+  ]
+}

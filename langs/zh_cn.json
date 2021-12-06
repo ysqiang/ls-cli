@@ -1,0 +1,54 @@
+{
+  "Cli": {
+    "CreateSuccess": "生成项目",
+    "StartPromt": "通过以下命令进行启动",
+    "Help": "查看脚手架信息"
+  },
+  "CreateCli": {
+    "AppName": "应用名称",
+    "Description": "创建一个前端项目",
+    "Options": {
+      "F": "覆盖已存在的目录",
+      "SRC": "模版来源.选项：'remote'（远程）,'local'（本地）"
+    },
+    "Overwrite": {
+      "Text": "是否覆盖已存在目录?",
+      "Yes": "覆盖",
+      "No": "取消"
+    }
+  },
+  "ListCli": {
+    "Description": "查看某一模块详细信息",
+    "Options": {
+      "TPL": "模版列表",
+      "I18N": "国际化支持列表"
+    },
+    "Table": {
+      "TH1": "序号",
+      "TH2": "模版名",
+      "TH3": "国际化语言"
+    }
+  },
+  "HelpCli": {
+    "Description": "查看指令使用说明"
+  },
+  "TPL": {
+    "SelectTPL":"请选择模版",
+    "SelectVersion": "请选择版本"
+  },
+  "Loading": {
+    "TPLList": "正在加载模版列表...",
+    "TPLVersionList": "正在加载当前选择模版的版本列表...",
+    "TPLDir": "正在下载模版目录..."
+  },
+  "Deps": {
+    "Installing": "正在安装依赖...",
+    "Installed": {
+      "Text": "是否安装依赖",
+      "Yes": "是",
+      "No": "否"
+    },
+    "IstFailure": "依赖安装失败",
+    "IstSuccess": "依赖安装成功"
+  }
+}
