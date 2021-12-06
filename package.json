@@ -1,11 +1,12 @@
 {
-  "name": "ls-cli",
+  "name": "lscli01",
   "version": "1.0.0",
   "description": "create project",
-  "main": "index.js",
+  "main": "./lib/cmd/ls-init.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./lib/cli/index init",
+    "dev01": "node ./lib/cli/test",
     "init": "node ./lib/cmd/ls-init.js ls-cli-template prj01",
     "ls-init": "node ./bin/ls.js init ls-cli-template hhh",
     "ls-add": "node ./bin/ls.js add"
@@ -13,10 +14,11 @@
   "keywords": [
     "cli"
   ],
-  "author": "liu sha",
+  "author": "ysqiang",
   "license": "ISC",
   "bin":{
-    "ls-cli": "./bin/ls.js" 
+    "ls-cli": "./bin/ls.js",
+    "ls-cli2": "./lib/cli/index.js" 
   },
   "dependencies": {
     "chalk": "^4.1.1",
