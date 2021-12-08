@@ -1,6 +1,6 @@
 {
   "name": "liusha-cli",
-  "version": "1.0.4",
+  "version": "1.0.11",
   "description": "简单的 Vue 脚手架（Vue cli）",
   "main": "index.js",
   "bin": {
@@ -11,11 +11,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "bin"
+    "bin",
+    "config",
+    "langs",
+    "src",
+    "templates",
+    "utils"
   ],
   "keywords": [
     "脚手架",
-    "cli"
+    "vue 脚手架",
+    "cli",
+    "vue cli"
   ],
   "repository": {
     "type": "git",
@@ -23,7 +30,7 @@
   },
   "author": "liu sha",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "axios": "^0.24.0",
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
@@ -34,5 +41,7 @@
     "inquirer": "^8.2.0",
     "ora": "^5.4.0",
     "table": "^6.7.3"
+  },
+  "devDependencies": {
   }
 }

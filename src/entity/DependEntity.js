@@ -23,7 +23,7 @@ class DependEntity {
     this.parseDeps();
     
     // 进入安装目录，安装依赖项
-    const cmdStr = `cd ${this.targetDir} && cnpm i ${this.deps.join(' ')}`;
+    const cmdStr = `cd ${this.targetDir} && npm i ${this.deps.join(' ')}`;
     const [res, status] = await AwaitExtend(execSync, {showLoading: true, msg: langs.Deps.Installing}, cmdStr);
     return [res, status];
   }
