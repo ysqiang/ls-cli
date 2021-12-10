@@ -12,9 +12,14 @@
       "SRC": "模版来源.选项：'remote'（远程）,'local'（本地）"
     },
     "Overwrite": {
-      "Text": "是否覆盖已存在目录?",
+      "Text": "是否覆盖已存在目录",
       "Yes": "覆盖",
       "No": "取消"
+    },
+    "Manual": {
+      "Text": "是否手动定义安装",
+      "Yes": "是",
+      "No": "否"
     }
   },
   "ListCli": {
@@ -50,5 +55,31 @@
     },
     "IstFailure": "依赖安装失败",
     "IstSuccess": "依赖安装成功"
+  },
+  "PrjCfg": {
+    "Name": {
+      "Prompt": "请输入项目名",
+      "Validate": "必须输入名称.要求: \n1.以小写字母a-z \n2.包括: a-z,0-9,-,_ \n3.长度: < 128\n"
+    },
+    "Version": {
+      "Prompt": "请输入项目版本号",
+      "Validate": "版本号以数字1-9开头"
+    },
+    "Desc": {
+      "Prompt": "请输入项目描述",
+      "Validate": ""
+    },
+    "Author": {
+      "Prompt": "请输入项目作者",
+      "Validate": ""
+    },
+    "Entry": {
+      "Prompt": "请输入项目入口文件",
+      "Validate": "文件名要求: \n1.以小写字母a-z开头 \n2.包括: a-z,0-9,-,_,. \n3.类型: .js or .ts \n4.长度: < 32 "
+    },
+    "License": {
+      "Prompt": "请输入项目许可认证",
+      "Validate": ""
+    }
   }
 }

@@ -55,29 +55,13 @@ cliCommand.command(`create <${langs.CreateCli.AppName}>`)
             const path = require('path')
             const targetDir = path.join(process.cwd(), name);
 
-            // 依赖安装控制
-            const depsInstall = require('../src/lib/installDeps');
-            let isInstalled = await depsInstall.used(targetDir);
-            
             const bSuccess = await require('../src/lib/create')(targetDir, name, options)
             if (!bSuccess) return;
-
-            if (isInstalled) {
-              const [res, status] = await depsInstall.installed();
-              isInstalled = status === 'success';
-              if (!isInstalled) {
-                console.log(`${chalk.red(`${langs.Deps.IstFailure}`)}`)
-              } else {
-                console.log(`${chalk.green(`${langs.Deps.IstSuccess}`)}`)
-              }
-            } 
 
             console.log(`\r\nls-cli ${chalk.magenta(`${langs.Cli.CreateSuccess}`)} ${chalk.green('"' + name + '"')}`)
             console.log(`\r\n${langs.Cli.StartPromt}: `)
             console.log(`\r\n  cd ${chalk.cyan(name)}`)
-            if (!isInstalled) {
-              console.log('  npm install or cnpm install')
-            }
+            console.log('  npm install or cnpm install')
             console.log('  npm run dev\r\n')
           })
 

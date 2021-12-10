@@ -1,11 +1,12 @@
 {
   "name": "liusha-cli",
-  "version": "1.0.11",
+  "version": "2.0.2",
   "description": "简单的 Vue 脚手架（Vue cli）",
   "main": "index.js",
   "bin": {
     "ls-cli": "./bin/cli.js",
-    "ls-vue": "./bin/cli.js"
+    "ls-vue": "./bin/cli.js",
+    "liusha-cli": "./bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,18 +19,12 @@
     "templates",
     "utils"
   ],
-  "keywords": [
-    "脚手架",
-    "vue 脚手架",
-    "cli",
-    "vue cli"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ysqiang/ls-cli.git"
   },
   "author": "liu sha",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
     "chalk": "^4.1.2",
@@ -42,6 +37,30 @@
     "ora": "^5.4.0",
     "table": "^6.7.3"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "keywords": [
+    "command line",
+    "cli",
+    "vue cli",
+    "脚手架",
+    "vue 脚手架",
+    "console",
+    "command",
+    "ls-cli"
+  ],
+  "engines": {
+    "node": ">=8.16.0 < 11.0",
+    "npm": "6.9.0"
+  },
+  "preferGlobal": true,
+  "config": {
+    "__binOpt": "全局可执行模块",
+    "__manOpt": "配置linux man 查找结果范围",
+    "__configOpt": "用于配置项目固定的option，如：port. 访问：process.env.npm_package_config_port",
+    "__enginesOpt": "模块项目运行环境",
+    "__osOpt": "模块运行操作系统.通过 process.platform 判断",
+    "__preferGlobalOpt": "建议安装到全局命令",
+    "__privateOpt": "控制npm发布",
+    "__publishConfigOpt": "模块发布时所需的信息"
   }
 }

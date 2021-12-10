@@ -15,6 +15,11 @@
       "Text": "Overwrite an existing directory",
       "Yes": "Overwrite",
       "No": "Cancel"
+    },
+    "Manual": {
+      "Text": "Manual install",
+      "Yes": "Yes",
+      "No": "No"
     }
   },
   "ListCli": {
@@ -50,5 +55,31 @@
     },
     "IstFailure": "Dependencies installation failure",
     "IstSuccess": "Dependencies installation success"
+  },
+  "PrjCfg": {
+    "Name": {
+      "Prompt": "please input project name",
+      "Validate": "Name is required. reqiured: \n1.startwith: letter a-z \n2.include: a-z,0-9,-,_ \n3.length: < 128\n"
+    },
+    "Version": {
+      "Prompt": "please input project version",
+      "Validate": "Version start with digit 1-9"
+    },
+    "Desc": {
+      "Prompt": "please input project description",
+      "Validate": ""
+    },
+    "Author": {
+      "Prompt": "please input project author",
+      "Validate": ""
+    },
+    "Entry": {
+      "Prompt": "please input project entry file",
+      "Validate": "Name is required. reqiured: \n1.startwith: letter \n2.include: a-z,0-9,-,_,. \n3.extension: .js or .ts \n4.length: < 32 "
+    },
+    "License": {
+      "Prompt": "please input project license",
+      "Validate": ""
+    }
   }
 }
