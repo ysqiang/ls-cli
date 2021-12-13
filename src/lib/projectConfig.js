@@ -39,10 +39,10 @@ module.exports = {
    */
   async settingConfig (targetDir, customConfig) {
     // 1. 入口文件重命名
-    const oldPath = path.join(targetDir, './src/main.js')
-    const newPath = path.join(targetDir, `./src/${customConfig.main}`)
-    const [renameRes, renameStatus] = await AwaitExtend(fs.rename, {}, oldPath, newPath)
-    if (renameStatus === 'fail') return false;
+    if (customConfig.main !== 'main.js') {
+      const bSuccess = await this.renameEntryFile(targetDir, customConfig.main)
+      if (!bSuccess) return false;
+    }
 
     // 2. 解析现有 package.json
     const packagePath = path.join(targetDir, 'package.json');
@@ -54,5 +54,32 @@ module.exports = {
     const [writeRes, writeStatus] = await AwaitExtend(fs.writeFile, {}, packagePath, jsonStr)
     if (writeStatus === 'fail') return false;
     return true;
+  },
+
+  async renameEntryFile(targetDir, entryFile){
+    // 1. 修改 package.json
+    const oldPath = path.join(targetDir, './src/main.js')
+    const newPath = path.join(targetDir, `./src/${entryFile}`)
+    const [renameRes, renameStatus] = await AwaitExtend(fs.rename, {}, oldPath, newPath)
+    if (renameStatus === 'fail') return false;
+
+    // 2. 修改 vue.config.js
+    const vueConfigPath = path.join(targetDir, 'vue.config.js');
+    const [vueConfigJS, readStatus] = await AwaitExtend(fs.readFile, {}, vueConfigPath, 'utf-8');
+    if (readStatus === 'fail') return false;
+
+    // vue.config.js 新增部分.目前利用简单的 replace 实现，此处需优化
+    let entryCfg = `module.exports = { 
+    pages: {
+      index: {
+        entry: 'src/${entryFile}'
+      }
+    },`
+    let str11 = vueConfigJS.replace('module.exports = {', entryCfg)
+    const [writeRes, writeStatus] = await AwaitExtend(fs.writeFile, {}, vueConfigPath, str11, 'utf-8')
+    if (writeStatus === 'fail') return false;
+
+    return true
   }
+
 }

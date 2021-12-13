@@ -22,16 +22,35 @@
       "No": "否"
     }
   },
+  "ConfigCli": {
+    "Description": "ls-cli 配置",
+    "Options": {
+      "V": "设置config项。针对set指令",
+      "K": "操作config项。针对 get|has|delete 指令"
+    },
+    "Error": {
+      "CMD": "Config 指令不存在.支持指令",
+      "EXEC": "Config 操作错误",
+      "PARAM": "参数格式不合理",
+      "OPT": "Config 不存在此配置"
+    },
+    "Success": {
+      "EXEC": "Config 操作结果"
+    }
+  },
   "ListCli": {
     "Description": "查看某一模块详细信息",
     "Options": {
       "TPL": "模版列表",
-      "I18N": "国际化支持列表"
+      "I18N": "国际化支持列表",
+      "CONF": "配置列表"
     },
     "Table": {
       "TH1": "序号",
       "TH2": "模版名",
-      "TH3": "国际化语言"
+      "TH3": "国际化语言",
+      "TH4": "配置项",
+      "TH5": "值"
     }
   },
   "HelpCli": {

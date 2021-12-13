@@ -22,16 +22,35 @@
       "No": "No"
     }
   },
+  "ConfigCli": {
+    "Description": "ls-cli configuration",
+    "Options": {
+      "V": "Set the config item. For [set] cmd",
+      "K": "Operate the config item. For [get|has|delete] cmd"
+    },
+    "Error": {
+      "CMD": "Configuration directive does not exist.Support",
+      "EXEC": "Configuration execution error",
+      "PARAM": "Configuration parameter format is incorrect",
+      "OPT": "Configuration options does not exist"
+    },
+    "Success": {
+      "EXEC": "Configuration execution result"
+    }
+  },
   "ListCli": {
     "Description": "About a module all items",
     "Options": {
       "TPL": "Template list",
-      "I18N": "Internationalization Support list"
+      "I18N": "Internationalization support list",
+      "CONF": "Configuration list"
     },
     "Table": {
       "TH1": "No.",
       "TH2": "template name",
-      "TH3": "langs name"
+      "TH3": "langs name",
+      "TH4": "config option",
+      "TH5": "value"
     }
   },
   "HelpCli": {

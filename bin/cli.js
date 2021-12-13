@@ -20,11 +20,12 @@ const cliCommand = require('commander')
 const chalk = require('chalk')
 const package = require('../package.json')
 
-// 国际化语言切换
-// const curr_lang = 'en_us' //zh_cn
-// const langs = require(`../langs/${curr_lang}.json`)
-const langs = require('../utils/i18n').register('zh_cn').getI18n();
+// 脚手架全局 config
+const globalConf = require('../src/lib/globalConfig');
+globalConf.init();
 
+// 国际化语言切换'en_us' //zh_cn
+const langs = require('../utils/i18n').register(globalConf.get('current_langs', 'zh_cn')).getI18n();
 
 // 脚手架版本和使用方式示例，以及配置脚本默认配置
 cliCommand.version(`v${package.version}`)
@@ -65,13 +66,35 @@ cliCommand.command(`create <${langs.CreateCli.AppName}>`)
             console.log('  npm run dev\r\n')
           })
 
+cliCommand.command(`config <set|get|has|delete|list|clear>`)
+          .description(`${langs.ConfigCli.Description}`)
+          .option('-v, --value <key=value>', `${langs.ConfigCli.Options.V}`)
+          .option('-k, --key <key>', `${langs.ConfigCli.Options.K}`)
+          .alias('c')
+          .action((name, option)=>{
+            const globalConfCli = require('../config/globalConfigCli').CONF_CLI;
+            if (!globalConfCli.includes(name)){
+              console.error(`\n ${chalk.red(langs.ConfigCli.Error.CMD)}：${globalConfCli.join('|')} \n`)
+              return;
+            }
+            
+            const [res, status] = globalConf.setting(name, option);
+            if (status) {
+              const isObject = Object.prototype.toString.call(res) === '[object Object]'
+              const resContent  = isObject ? res : chalk.green(res);
+              console.log(`\n ${langs.ConfigCli.Success.EXEC}：`, resContent)             
+            } else {
+              console.error(`\n ${chalk.bgRed(langs.ConfigCli.Error.EXEC)}：${chalk.magenta(res)} `)
+            }
+          })
+
 cliCommand.command(`list`)
           .description(`${langs.ListCli.Description}`)
           .option('-tpl, --template [template-source]', `${langs.ListCli.Options.TPL}`)
           .option('-i, --i18n', `${langs.ListCli.Options.I18N}`)
+          .option('-conf, --config', `${langs.ListCli.Options.CONF}`)
           .alias('ls')
           .action(async (options) => {
-            // console.log('******* list ', options)
             const bSuccess = await require('../src/lib/list')(options)
           })
 

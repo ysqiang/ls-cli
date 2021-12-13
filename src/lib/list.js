@@ -47,7 +47,18 @@ module.exports = async function(options) {
     }
   }
 
-  // console.log('********* list.js ', options)
+  if (options.config) {
+    const globalConf = require('./globalConfig');
+    const confObj = globalConf.list();
+
+    const {table} = require('table')
+    let tableCtor = [[`${langs.ListCli.Table.TH1}`, `${langs.ListCli.Table.TH4}`, `${langs.ListCli.Table.TH5}`]]
+    let i = 1;
+    for (key in confObj) {
+      tableCtor.push([i++, key, confObj[key]]);
+    }
+    console.log(table(tableCtor))
+  }
 
   return true;
 }

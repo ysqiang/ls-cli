@@ -1,8 +1,9 @@
 const axios = require('axios')
 
+const globalConf = require('../lib/globalConfig');
 // 基础配置
 axios.defaults.baseURL = '';
-axios.defaults.timeout = 30000; // 30s 超时
+axios.defaults.timeout = globalConf.get('request_timeout', 30000); // 30s 超时
 axios.defaults.withCredentials = true; // 允许跨域
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
