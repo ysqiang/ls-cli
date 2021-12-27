@@ -1,6 +1,6 @@
 {
   "name": "liusha-cli",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "简单的 Vue 脚手架（Vue cli）",
   "main": "index.js",
   "bin": {
@@ -29,6 +29,7 @@
     "axios": "^0.24.0",
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
+    "conf": "^10.1.1",
     "cross-spawn": "^7.0.3",
     "download-git-repo": "^3.0.2",
     "figlet": "^1.5.2",
@@ -39,14 +40,20 @@
   },
   "devDependencies": {},
   "keywords": [
-    "command line",
     "cli",
-    "vue cli",
     "脚手架",
+    "vue cli",
     "vue 脚手架",
+    "commandline",
+    "command line",
     "console",
     "command",
-    "ls-cli"
+    "ls-cli",
+    "中文",
+    "cli 中文",
+    "vue cli 中文",
+    "脚手架 中文",
+    "vue 脚手架 中文"
   ],
   "engines": {
     "node": ">=8.16.0 < 11.0",
